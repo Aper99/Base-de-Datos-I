@@ -1,22 +1,28 @@
 -- 1
-drop table if exists peliculas;
+drop table if exists agenda;
 
 -- 2
-create table peliculas (
-	nombre varchar(20),
-	actor varchar(20),
-	duracion integer,
-	cantidad integer
+create table agenda (
+	nombre varchar(30),
+	domicilio varchar(30),
+	telefono varchar(11)
 	);
 	
 -- 3
-describe peliculas;
+show tables;
 
 -- 4
-insert into peliculas (nombre, actor, duracion, cantidad) values('Mision Imposible', 'Tom Cruise', 120, 3);
-insert into peliculas (nombre, actor, duracion, cantidad) values('Mision Imposible 2', 'Tom Cruise', 180, 2);
-insert into peliculas (nombre, actor, duracion, cantidad) values('Mujer Bonita', 'Julia R', 90, 3);
-insert into peliculas (nombre, actor, duracion, cantidad) values('Elsa y Fred', 'China Zorrilla', 90, 2);
+describe agenda;
 
 -- 5
-select * from peliculas;
+insert into agenda (nombre, domicilio, telefono) values ('Alberto Mores', 'Colon 123', '4234567');
+insert into agenda (nombre, domicilio, telefono) values('Juan Torres', 'Avellaneda 135', '4458787');
+
+-- 6
+select * from agenda;
+
+-- 7
+drop table if exists agenda;
+
+-- 8
+drop table agenda;
